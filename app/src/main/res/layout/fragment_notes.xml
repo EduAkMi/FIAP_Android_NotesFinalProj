@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_background_1"
+    tools:context=".presentation.notes.NotesFragment">
+
+    <TextView
+        android:id="@+id/txtLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/default_margin_end"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/logout"
+        android:textColor="@color/base_text_3"
+        app:layout_constraintBottom_toBottomOf="@id/txtYourNotes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txtTitle" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin_start"
+        android:layout_marginTop="@dimen/default_margin_top"
+        android:layout_marginEnd="12dp"
+        android:textColor="@color/base_text_1"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toStartOf="@id/txtLogout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Hello Eduardo" />
+
+    <TextView
+        android:id="@+id/txtYourNotes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:text="@string/your_notes"
+        android:textColor="@color/base_text_1"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/txtLogout"
+        app:layout_constraintStart_toStartOf="@id/txtTitle"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recNotes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtYourNotes"
+        app:spanCount="2"
+        tools:itemCount="0"
+        tools:listitem="@layout/rec_notes" />
+
+    <ImageView
+        android:id="@+id/imgEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rafiki"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtYourNotes"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <TextView
+        android:id="@+id/txtEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:letterSpacing="0.03"
+        android:text="Create your first note !"
+        android:textColor="@color/base_text_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgEmpty" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCreate"
+        style="@style/MaterialButtonRounded"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="@dimen/default_margin_end"
+        android:layout_marginBottom="@dimen/default_margin_bottom"
+        app:backgroundTint="@color/base_color_1"
+        app:icon="@drawable/ic_add_24"
+        app:iconSize="40dp"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupEmpty"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:constraint_referenced_ids="imgEmpty, txtEmpty"
+        tools:visibility="visible" />
+</androidx.constraintlayout.widget.ConstraintLayout>

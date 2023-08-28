@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/notes_graph"
+    app:startDestination="@id/notesScreen">
+
+    <fragment
+        android:id="@+id/notesScreen"
+        android:name="com.notesfinalproject.presentation.notes.NotesFragment"
+        tools:layout="@layout/fragment_notes">
+        <action
+            android:id="@+id/action_notes_to_create_note"
+            app:destination="@id/editNoteScreen" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editNoteScreen"
+        android:name="com.notesfinalproject.presentation.notes.EditNoteFragment"
+        tools:layout="@layout/fragment_edit_note">
+        <argument
+            android:name="noteId"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+</navigation>

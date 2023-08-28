@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_graph"
+    app:startDestination="@id/loginScreen">
+
+    <fragment
+        android:id="@+id/loginScreen"
+        android:name="com.notesfinalproject.presentation.login.LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_to_create_account"
+            app:destination="@id/createAccountScreen" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createAccountScreen"
+        android:name="com.notesfinalproject.presentation.login.CreateAccountFragment"
+        tools:layout="@layout/fragment_create_account" />
+</navigation>

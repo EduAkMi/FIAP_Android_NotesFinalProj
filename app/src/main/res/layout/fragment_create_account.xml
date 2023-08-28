@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_background_1"
+    tools:context=".presentation.login.CreateAccountFragment">
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin_start"
+        android:layout_marginTop="@dimen/default_margin_top"
+        android:src="@drawable/ic_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/base_color_1" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="@dimen/default_margin_end"
+        android:text="@string/create_account"
+        android:textColor="@color/base_text_1"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/btnBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnBack"
+        app:layout_constraintTop_toTopOf="@id/btnBack" />
+
+    <TextView
+        android:id="@+id/txtWelcomeTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/lets_get_to_know_you"
+        android:textColor="@color/base_text_1"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/txtWelcomeDescription"
+        app:layout_constraintEnd_toEndOf="@id/txtTitle"
+        app:layout_constraintStart_toStartOf="@id/btnBack"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/txtWelcomeDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_details_continue"
+        android:textColor="@color/base_text_1"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@id/txtEmail"
+        app:layout_constraintEnd_toEndOf="@id/txtTitle"
+        app:layout_constraintStart_toStartOf="@id/btnBack"
+        app:layout_constraintTop_toBottomOf="@id/txtWelcomeTitle" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtName"
+        style="@style/BaseTextInputLayoutStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/name"
+        android:textColorHint="@color/base_text_2"
+        app:hintTextColor="@color/base_color_1"
+        app:layout_constraintEnd_toEndOf="@id/txtTitle"
+        app:layout_constraintStart_toStartOf="@id/btnBack"
+        app:layout_constraintTop_toBottomOf="@id/txtWelcomeDescription"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:startIconDrawable="@drawable/ic_person_24"
+        app:startIconTint="@color/base_color_1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:textColor="@color/base_text_1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtEmail"
+        style="@style/BaseTextInputLayoutStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:hint="@string/email_address"
+        android:textColorHint="@color/base_text_2"
+        app:hintTextColor="@color/base_color_1"
+        app:layout_constraintEnd_toEndOf="@id/txtTitle"
+        app:layout_constraintStart_toStartOf="@id/btnBack"
+        app:layout_constraintTop_toBottomOf="@id/txtName"
+        app:startIconDrawable="@drawable/ic_password_24"
+        app:startIconTint="@color/base_color_1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/base_text_1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtPassword"
+        style="@style/BaseTextInputLayoutStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:hint="@string/password"
+        android:textColorHint="@color/base_text_2"
+        app:hintTextColor="@color/base_color_1"
+        app:layout_constraintEnd_toEndOf="@id/txtTitle"
+        app:layout_constraintStart_toStartOf="@id/btnBack"
+        app:layout_constraintTop_toBottomOf="@id/txtEmail"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/base_boxes_1"
+        app:startIconDrawable="@drawable/ic_email_24"
+        app:startIconTint="@color/base_color_1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textColor="@color/base_text_1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtPasswordConfirm"
+        style="@style/BaseTextInputLayoutStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:hint="@string/password_confirm"
+        android:textColorHint="@color/base_text_2"
+        app:hintTextColor="@color/base_color_1"
+        app:layout_constraintEnd_toEndOf="@id/txtTitle"
+        app:layout_constraintStart_toStartOf="@id/btnBack"
+        app:layout_constraintTop_toBottomOf="@id/txtPassword"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/base_boxes_1"
+        app:startIconDrawable="@drawable/ic_password_24"
+        app:startIconTint="@color/transparent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtPasswordConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textColor="@color/base_text_1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/txtTerms"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="@string/agree_terms_use"
+        app:layout_constraintBottom_toTopOf="@id/btnCreateAccount"
+        app:layout_constraintEnd_toEndOf="@id/txtTitle"
+        app:layout_constraintStart_toStartOf="@id/btnBack"
+        app:layout_constraintTop_toBottomOf="@id/txtPasswordConfirm"
+        app:layout_constraintVertical_bias="1" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCreateAccount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:alpha="0.5"
+        android:text="@string/create_account"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/base_color_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/txtTitle"
+        app:layout_constraintStart_toStartOf="@id/btnBack"
+        app:layout_constraintWidth_percent="0.85" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/transparent_background"
+        app:cardCornerRadius="0dp"
+        app:rippleColor="@color/transparent"
+        app:strokeWidth="0dp"
+        tools:visibility="visible">
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleX="0.15"
+            android:scaleY="0.15" />
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

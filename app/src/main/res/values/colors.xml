@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="transparent">#00FFFFFF</color>
+
+    <color name="base_background_1">#F1F1F1</color>
+
+    <color name="base_color_1">#FFB347</color>
+
+    <color name="base_boxes_1">#202020</color>
+
+    <color name="base_text_1">#000000</color>
+    <color name="base_text_2">#606060</color>
+    <color name="base_text_3">#FF4444</color>
+
+    <color name="transparent_background">#1A000000</color>
+
+    <color name="note_white_1">#ffffff</color>
+    <color name="note_white_2">#F1F1F1</color>
+    <color name="note_salmon_1">#FF9E9E</color>
+    <color name="note_orange_1">#FFB347</color>
+    <color name="note_cyan_1">#9EFFFF</color>
+    <color name="note_yellow_1">#FFF599</color>
+    <color name="note_green_1">#91F48F</color>
+    <color name="note_blue_1">#624AF2</color>
+    <color name="note_purple_1">#B69CFF</color>
+    <color name="note_pink_1">#FD99FF</color>
+    <color name="note_pink_2">#FCDDEC</color>
+    <color name="note_grey_1">#C4C4C4</color>
+</resources>

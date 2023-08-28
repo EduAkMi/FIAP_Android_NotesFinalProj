@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/default_margin_bottom"
+    tools:context=".presentation.bottomdialogs.BottomNoteColors">
+
+    <TextView
+        android:id="@+id/txtDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="12dp"
+        android:paddingStart="@dimen/default_margin_start"
+        android:paddingTop="20dp"
+        android:paddingEnd="@dimen/default_margin_end"
+        android:paddingBottom="20dp"
+        android:text="@string/note_delete"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:drawableStartCompat="@drawable/ic_delete_24"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <View
+        android:id="@+id/viewSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/txtDelete" />
+
+    <TextView
+        android:id="@+id/txtSelectColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:text="@string/select_color"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/viewSeparator" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgColorNone"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/note_white_1"
+        android:padding="1dp"
+        app:layout_constraintEnd_toStartOf="@id/imgColorSalmon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtSelectColor"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.circleImageView"
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgColorSalmon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@color/note_salmon_1"
+        app:layout_constraintEnd_toStartOf="@id/imgColorOrange"
+        app:layout_constraintStart_toEndOf="@id/imgColorNone"
+        app:layout_constraintTop_toTopOf="@id/imgColorNone"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.circleImageView" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgColorOrange"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@color/note_orange_1"
+        app:layout_constraintEnd_toStartOf="@id/imgColorYellow"
+        app:layout_constraintStart_toEndOf="@id/imgColorSalmon"
+        app:layout_constraintTop_toTopOf="@id/imgColorNone"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.circleImageView" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgColorYellow"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@color/note_yellow_1"
+        app:layout_constraintEnd_toStartOf="@id/imgColorCyan"
+        app:layout_constraintStart_toEndOf="@id/imgColorOrange"
+        app:layout_constraintTop_toTopOf="@id/imgColorNone"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.circleImageView" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgColorCyan"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@color/note_cyan_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgColorYellow"
+        app:layout_constraintTop_toTopOf="@id/imgColorNone"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.circleImageView" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgColorGreen"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/note_green_1"
+        app:layout_constraintEnd_toStartOf="@id/imgColorPink1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgColorNone"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.circleImageView" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgColorPink1"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@color/note_pink_1"
+        app:layout_constraintEnd_toStartOf="@id/imgColorPurple"
+        app:layout_constraintStart_toEndOf="@id/imgColorGreen"
+        app:layout_constraintTop_toTopOf="@id/imgColorGreen"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.circleImageView" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgColorPurple"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@color/note_purple_1"
+        app:layout_constraintEnd_toStartOf="@id/imgColorBlue"
+        app:layout_constraintStart_toEndOf="@id/imgColorPink1"
+        app:layout_constraintTop_toTopOf="@id/imgColorGreen"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.circleImageView" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgColorBlue"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@color/note_blue_1"
+        app:layout_constraintEnd_toStartOf="@id/imgColorGrey"
+        app:layout_constraintStart_toEndOf="@id/imgColorPurple"
+        app:layout_constraintTop_toTopOf="@id/imgColorGreen"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.circleImageView" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgColorGrey"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@color/note_grey_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgColorBlue"
+        app:layout_constraintTop_toTopOf="@id/imgColorGreen"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.circleImageView" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgColorPink2"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/note_pink_2"
+        app:layout_constraintEnd_toStartOf="@id/imgColorPink1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgColorGreen"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.circleImageView" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgColorWhite"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@color/note_white_2"
+        app:layout_constraintEnd_toStartOf="@id/imgColorPurple"
+        app:layout_constraintStart_toEndOf="@id/imgColorPink2"
+        app:layout_constraintTop_toTopOf="@id/imgColorPink2"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.circleImageView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

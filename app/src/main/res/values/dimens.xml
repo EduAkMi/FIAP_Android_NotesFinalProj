@@ -1,0 +1,7 @@
+<resources>
+    <dimen name="default_margin_start">24dp</dimen>
+    <dimen name="default_margin_end">24dp</dimen>
+    <dimen name="default_margin_top">24dp</dimen>
+    <dimen name="default_margin_bottom">24dp</dimen>
+
+</resources>
