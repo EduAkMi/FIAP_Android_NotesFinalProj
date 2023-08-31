@@ -29,6 +29,7 @@
     <string name="hello_user">Hello %s</string>
     <string name="your_notes">Your Notes</string>
     <string name="note_no_title">(No title)</string>
+    <string name="create_your_first_note">Create your first note !</string>
 
     <plurals name="note_days_ago">
         <item quantity="one">%s day ago</item>

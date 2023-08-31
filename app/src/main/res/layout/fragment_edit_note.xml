@@ -83,7 +83,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="18dp"
                 android:background="@null"
-                android:hint="Type something..."
+                android:hint="@string/type_something"
                 android:inputType="textCapSentences"
                 android:textColor="@color/black"
                 android:textColorHint="@color/base_text_2"

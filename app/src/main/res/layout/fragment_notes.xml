@@ -80,7 +80,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:letterSpacing="0.03"
-        android:text="Create your first note !"
+        android:text="@string/create_your_first_note"
         android:textColor="@color/base_text_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
